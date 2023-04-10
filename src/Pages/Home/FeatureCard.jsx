@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Star from './Star';
+import { ProductContext } from '../../Context/AuthProvider';
+import toast from 'react-hot-toast';
 
 const FeatureCard = ({trandingProduct}) => {
+  const {addTocard} = useContext(ProductContext)
+  const addtocard = (product)=>{
+        toast.success('Successfully Add to cart!')
+        addTocard.push(product)
+   }
     return (
       
   
@@ -20,10 +27,10 @@ const FeatureCard = ({trandingProduct}) => {
           <Star></Star>
           <Star></Star></div>
           <p className='text-[#70e24a] font-bold'>IN STOCK</p>
-          <p>Prise: {trandingProduct.Price}</p>
+          <p>Price: $ {trandingProduct.Price}</p>
           
           <div className="card-actions justify-between">
-          <button className="btn btn-sm bg-[#6EB356] px-5 border-0">Add to Cart</button>
+          <a className="btn btn-sm bg-[#6EB356] px-5 border-0" onClick={()=> addtocard (trandingProduct)}>Add to Cart</a>
             
           </div>
         </div>

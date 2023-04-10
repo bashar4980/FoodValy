@@ -1,16 +1,19 @@
 import React, { useContext, useState ,useMemo} from 'react';
 import { ProductContext } from '../../Context/AuthProvider';
 import Star from '../Home/Star';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ProductCard = () => {
     const {products , addTocard} = useContext(ProductContext);
     const [Selectedcategory , setCategory] = useState("")
    const handleClick =(e)=>{
+    e.preventDefault()
     const msg = e.target.value;
       setCategory(msg)
    }
 
    const addtocard = (product)=>{
+    toast.success('Successfully Add to cart!')
         addTocard.push(product)
    }
  // Function to get filtered list
@@ -82,50 +85,39 @@ var filteredList = useMemo(getFilteredList, [Selectedcategory, products]);
       </div>
 
       <div className="lg:col-span-3">
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
          {
             filteredList.map((product)=>{
                return(
-                <>
-                 <li key={product.productNamr} className='border'>
-                <a href="#" className="group block overflow-hidden">
-                  <img
-                    src={product.productImg}
-                    className=" transition duration-500 group-hover:scale-105 "
-                  />
-    
-                  <div className="relative bg-white pt-3">
-                    <h3
-                      className="text-lg m-3 text-gray-700 group-hover:underline group-hover:underline-offset-4"
-                    >
-                     {product.productName}
-                    </h3>
-                    <div className='flex ml-3'>
-                        <Star></Star>
-                        <Star></Star>
-                        <Star></Star>
-                        <Star></Star>
-                        <Star></Star>
-                    </div>
-    
-                    <p className="m-3 font-bold">
-                     
-                      <span className="tracking-wider text-gray-900"> Price: {product.Price} </span>
-                    </p>
-                    <div className="card-actions justify-between m-3">
-                <button type='button' className="btn btn-sm bg-[#6EB356] px-5 border-0" onClick={()=> addtocard (product)}>Add to Cart</button>
-            
-          </div>
+                <div className="card border-gray-100 border-2 relative w-full max-h-[400px]  shadow-xl">
+                <figure className="">
+                  <img src={product.productImg} className="rounded " alt="Shoes" />
+                </figure>
+                <div className="card-body text-left">
+                  <h2 className="card-text font-bold">
+                    {product.productName}
+                   
+                  </h2>
+                  <div className='flex'><Star></Star>
+                  <Star></Star>
+                  <Star></Star>
+                  <Star></Star>
+                  <Star></Star></div>
+                  <p className='text-[#70e24a] font-bold'>IN STOCK</p>
+                  <p>Price: $ {product.Price}</p>
+                  
+                  <div className="card-actions justify-between">
+                  <a className="btn btn-sm bg-[#6EB356] px-5 border-0" onClick={()=> addtocard (product)}>Add to Cart</a>
+                    
                   </div>
-                </a>
-              </li>
-                </>
+                </div>
+              </div>
                )
             })
          }
 
        
-        </ul>
+        </div>
       </div>
     </div>
   </div>

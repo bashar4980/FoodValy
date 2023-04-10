@@ -3,6 +3,7 @@ import Category from "./Category";
 import Features from "./Features";
 import Review from "./Review";
 import Newslatter from "./Newslatter";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <h1 className="text-5xl font-bold">Online Freash <br></br> Grocery <br></br>Products</h1>
       
       <p className="py-6">Assertively targer market-driven intellectual capital with<br></br> worldwide human capital holistic</p>
-      <button className="btn bg-[#ee9f27] hover:bg-[#6EB356] px-5 border-0">Shop Now</button>
-      <button className="btn bg-[#6EB356] hover:bg-[#ee9f27] px-5 border-0 ml-5">About us</button>
+      <Link to="/products" className="btn bg-[#ee9f27] hover:bg-[#6EB356] px-5 border-0">Shop Now</Link>
+      <Link to="/about" className="btn bg-[#6EB356] hover:bg-[#ee9f27] px-5 border-0 ml-5">About us</Link>
     </div>
  
    <img src="https://grostore-wp.themetags.com/wp-content/uploads/2023/03/fruits.png " className=" max-w-[400px] rounded-lg " />

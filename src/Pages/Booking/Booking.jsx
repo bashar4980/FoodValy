@@ -4,13 +4,13 @@ import { ProductContext } from '../../Context/AuthProvider';
 const Booking = () => {
     const {addTocard} = useContext(ProductContext);
 
-    const [sum , setSum] = useState(0);
-    var total = 0
+    const [sum , setSum] = useState();
+            var value = 0
     useEffect(()=>{
          addTocard.filter((pro)=>{
-            const value =parseFloat(pro.Price);
+             value =parseFloat(pro.Price);
             
-             total += value;
+             let total= value + value;
              setSum(total)
             
          })
@@ -44,7 +44,7 @@ const Booking = () => {
               {
                 addTocard.map((product)=>{
                     return(
-                     <li className="flex items-center gap-4 py-4">
+                     <li key={product.key} className="flex items-center gap-4 py-4">
           
                 <img
                   src={product.productImg}
