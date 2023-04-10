@@ -1,0 +1,93 @@
+
+
+[
+  {
+    "productName":"Fresh Organic Broccoli Crowns",
+    "Price":"$3",
+    "category":"FRUIT & VEGETABLES",
+    "productImg":"https://i.ibb.co/YPN0cZJ/Fresh-Organic-Broccoli-Crowns.jpg",
+    "Tranding": false
+  },
+  {
+    "productName":"Fresh Cavendish Bananas",
+    "Price":"$5",
+    "category":"FRUIT & VEGETABLES",
+    "productImg":"https://i.ibb.co/Q9PBzks/Fresh-Cavendish-Bananas.jpg",
+    "Tranding": true
+  },
+  {
+    "productName":"Fresh Produce Melons Each",
+    "Price":"$10",
+    "category":"FRUIT & VEGETABLES",
+    "productImg":"https://i.ibb.co/WkJ5rSq/Fresh-Produce-Melons-Each.jpg",
+    "Tranding": false
+  },
+  {
+    "productName":"Organic Green Grapes",
+    "Price":"$4",
+    "category":"FRUIT & VEGETABLES",
+    "productImg":"https://i.ibb.co/TMqtspm/Organic-Green-Grapes.jpg",
+    "Tranding": false
+  },
+  
+  {
+    "productName":"Fresh Brown Coconut",
+    "Price":"$5",
+    "category":"FRUIT & VEGETABLES",
+    "productImg":"https://i.ibb.co/Lx2CMq5/Fresh-Brown-Coconut.jpg",
+    "Tranding": false
+  },
+    
+  {
+    "productName":"Vital Farms Pasture-Raised Egg",
+    "Price":"$5",
+    "category":"BREAKFAST & DAIRY",
+    "productImg":"https://i.ibb.co/hsx7pp5/Vital-Farms-Pasture-Raised-Egg-Bites-Bacon-Cheddar.jpg",
+    "Tranding": false
+  },
+  {
+    "productName":"Blueberries – 1 Pint Package",
+    "Price":"$10",
+    "category":"BREAKFAST & DAIRY",
+    "productImg":"https://i.ibb.co/QXCVjqw/Blueberries-1-Pint-Package.jpg",
+    "Tranding": false
+  },
+  {
+    "productName":"American Cheese Singles",
+    "Price":"$15",
+    "category":"BREAKFAST & DAIRY",
+    "productImg":"https://i.ibb.co/hVxB992/American-Cheese-Singles.jpg",
+    "Tranding": true
+  },
+  {
+    "productName":"Oroweat Country Buttermilk Bread",
+    "Price":"$4.44",
+    "category":"Breads & Bakery",
+    "productImg":"https://i.ibb.co/5c0190g/Oroweat-Country-Buttermilk-Bread.jpg",
+    "Tranding": true
+  },
+  {
+    "productName":"100% Butter French Croissants",
+    "Price":"$1.44",
+    "category":"Breads & Bakery",
+    "productImg":"https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-55.jpg",
+    "Tranding": false
+  },
+  {
+    "productName":"Pepperidge Farm Farmhouse Hearty White Bread",
+    "Price":"$2.44",
+    "category":"Breads & Bakery",
+    "productImg":"https://i.ibb.co/nQr0m2V/Pepperidge-Farm-Farmhouse-Hearty-White-Bread.jpg",
+    "Tranding": false
+  },
+  {
+    "productName":"Lemon Cream Crunch Cookies.jpg",
+    "Price":"$5.44",
+    "category":"Breads & Bakery",
+    "productImg":"https://i.ibb.co/VHD1zVq/Lemon-Cream-Crunch-Cookies.jpg",
+    "Tranding": true
+  }
+  
+  
+
+]
