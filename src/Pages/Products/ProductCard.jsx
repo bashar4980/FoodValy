@@ -3,18 +3,23 @@ import { ProductContext } from '../../Context/AuthProvider';
 import Star from '../Home/Star';
 
 const ProductCard = () => {
-    const {products} = useContext(ProductContext);
+    const {products , addTocard} = useContext(ProductContext);
     const [Selectedcategory , setCategory] = useState("")
    const handleClick =(e)=>{
     const msg = e.target.value;
       setCategory(msg)
    }
 
+   const addtocard = (product)=>{
+        addTocard.push(product)
+   }
  // Function to get filtered list
  function getFilteredList() {
   // Avoid filter when selectedCategory is null
   if (!Selectedcategory ) {
     return products;
+  }else if(Selectedcategory == "ALL"){
+        return products
   }
   return products.filter((item) => item.category === Selectedcategory);
 }
@@ -63,15 +68,16 @@ var filteredList = useMemo(getFilteredList, [Selectedcategory, products]);
     </div>
 
     <div className="mt-4 lg:mt-8 lg:grid lg:grid-cols-4 lg:items-start lg:gap-8">
-      <div className="hidden space-y-4 lg:block">
+      <div className="space-y-4 ">
        
 
-        <div>
+        <div className='grid grid-cols-1'>
           <p className="block text-xs font-medium text-gray-700">Filters by Catrgory</p>
 
-          <button className='btn mt-5' onClick={handleClick}  value="FRUIT & VEGETABLES">FRUIT & VEGETABLES</button>
-          <button className='btn my-5 px-6' onClick={handleClick}  value="Breads & Bakery">Breads & Bakery</button>
-          <button className='btn' onClick={handleClick} value="BREAKFAST & DAIRY">BREAKFAST & DAIRY</button>
+          <button className='btn mt-5 btn-sm' onClick={handleClick}  value="ALL">ALL</button>
+          <button className='btn mt-5 btn-sm' onClick={handleClick}  value="FRUIT & VEGETABLES">FRUIT & VEGETABLES</button>
+          <button className='btn my-5 px-6 btn-sm' onClick={handleClick}  value="Breads & Bakery">Breads & Bakery</button>
+          <button className='btn btn-sm' onClick={handleClick} value="BREAKFAST & DAIRY">BREAKFAST & DAIRY</button>
         </div>
       </div>
 
@@ -107,7 +113,7 @@ var filteredList = useMemo(getFilteredList, [Selectedcategory, products]);
                       <span className="tracking-wider text-gray-900"> Price: {product.Price} </span>
                     </p>
                     <div className="card-actions justify-between m-3">
-          <button className="btn btn-sm bg-[#6EB356] px-5 border-0">Add to Cart</button>
+                <button type='button' className="btn btn-sm bg-[#6EB356] px-5 border-0" onClick={()=> addtocard (product)}>Add to Cart</button>
             
           </div>
                   </div>
