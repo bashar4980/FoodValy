@@ -13,7 +13,7 @@ export default function Home() {
     
     <div className="max-w-1/2"> 
       <h1 className=" font-bold">Genuine 100% Organic Products</h1>
-      <h1 className="text-5xl font-bold">Online Freash <br></br> Grocery <br></br>Products</h1>
+      <h1 className=" text-3xl lg:text-5xl font-bold">Online Freash <br></br> Grocery <br></br>Products</h1>
       
       <p className="py-6">Assertively targer market-driven intellectual capital with<br></br> worldwide human capital holistic</p>
       <Link to="/products" className="btn bg-[#ee9f27] hover:bg-[#6EB356] px-5 border-0">Shop Now</Link>
