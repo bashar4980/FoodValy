@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import '../../App.css'
 
 const Category = () => {
@@ -14,22 +15,34 @@ const Category = () => {
                   src="https://i.ibb.co/YPN0cZJ/Fresh-Organic-Broccoli-Crowns.jpg"
                   alt="Shoes"
                 />
-              <p className="font-bold">FRUIT & VEGETABLES</p>
+              <p className="font-bold text-center">FRUIT & VEGETABLES</p>
+              <div className="card-actions justify-center m-3">
+          <Link to="/products" className="btn btn-sm bg-[#6EB356] px-5 border-0">Buy Now</Link>
+            
+          </div>
             </div>
+            <div className="border-gray-100 border-2">
+            <img
+                  src="https://i.ibb.co/VHD1zVq/Lemon-Cream-Crunch-Cookies.jpg"
+                  alt="Shoes"
+                />
+                <p className="font-bold text-center">Breads & Bakery</p>
+                <div className="card-actions justify-center m-3">
+          <Link to="/products" className="btn btn-sm bg-[#6EB356] px-5 border-0">Buy Now</Link>
+            
+          </div>
+            </div>
+
             <div className="border-gray-100 border-2">
             <img
                   src="https://i.ibb.co/QXCVjqw/Blueberries-1-Pint-Package.jpg"
                   alt="Shoes"
                 />
-                <p className="font-bold">FRUIT & VEGETABLES</p>
-            </div>
-
-            <div className="border-gray-100 border-2">
-            <img
-                  src="https://i.ibb.co/YPN0cZJ/Fresh-Organic-Broccoli-Crowns.jpg"
-                  alt="Shoes"
-                />
-               <p className="font-bold">FRUIT & VEGETABLES</p>
+               <p className="font-bold text-center">BREAKFAST & DAIRY</p>
+               <div className="card-actions justify-center m-3">
+          <Link to="/products" className="btn btn-sm bg-[#6EB356] px-5 border-0">Buy Now</Link>
+            
+          </div>
             </div>
         </div>
         {/* <div className="  grid justify-center grid-cols-2 text-bold  gap-5 lg:grid-cols-3">
