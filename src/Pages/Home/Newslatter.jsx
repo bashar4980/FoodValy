@@ -3,7 +3,7 @@ import React from "react";
 const Newslatter = () => {
   return (
     <div className="py-5">
-      <div className="relative bg-[url(https://k4j3j2s7.rocketcdn.me/bacola/wp-content/uploads/2021/08/bacola-banner-18.jpg)] bg-cover bg-center bg-no-repeat ">
+      <div className="relative bg-[url(https://i.ibb.co/m4Vw8tw/bacola-banner-18.jpg)] bg-cover bg-center bg-no-repeat ">
         <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
           <h1 className="text-5xl antialiased font-semibold leading-none text-center dark:text-gray-100">
           Join our newsletter and get...
