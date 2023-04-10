@@ -1,10 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState ,useMemo} from 'react';
 import { ProductContext } from '../../Context/AuthProvider';
 import Star from '../Home/Star';
 
 const ProductCard = () => {
     const {products} = useContext(ProductContext);
-    console.log(products)
+    const [Selectedcategory , setCategory] = useState("")
+   const handleClick =(e)=>{
+    const msg = e.target.value;
+      setCategory(msg)
+   }
+
+ // Function to get filtered list
+ function getFilteredList() {
+  // Avoid filter when selectedCategory is null
+  if (!Selectedcategory ) {
+    return products;
+  }
+  return products.filter((item) => item.category === Selectedcategory);
+}
+var filteredList = useMemo(getFilteredList, [Selectedcategory, products]);
+
+
     return (
         <div>
 
@@ -53,16 +69,16 @@ const ProductCard = () => {
         <div>
           <p className="block text-xs font-medium text-gray-700">Filters by Catrgory</p>
 
-          <button className='btn mt-5'>FRUIT & VEGETABLES</button>
-          <button className='btn my-5 px-6'>Breads & Bakery</button>
-          <button className='btn'>BREAKFAST & DAIRY</button>
+          <button className='btn mt-5' onClick={handleClick}  value="FRUIT & VEGETABLES">FRUIT & VEGETABLES</button>
+          <button className='btn my-5 px-6' onClick={handleClick}  value="Breads & Bakery">Breads & Bakery</button>
+          <button className='btn' onClick={handleClick} value="BREAKFAST & DAIRY">BREAKFAST & DAIRY</button>
         </div>
       </div>
 
       <div className="lg:col-span-3">
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
          {
-            products.map((product)=>{
+            filteredList.map((product)=>{
                return(
                 <>
                  <li key={product.productNamr} className='border'>
